@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "grapto-v3w")(type "KiCad")(uri "${KIPRJMOD}/grapto-v3w.kicad_sym")(options "")(descr ""))
+)
