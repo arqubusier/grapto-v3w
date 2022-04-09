@@ -1,28 +1,29 @@
 * Requirements
 The project will go on indefinitely until these the system meets these.
-| Id | Description                                                                  |
-|----+------------------------------------------------------------------------------|
-| r1 | the keyboard is wireless                                                     |
-| r2 | the keyboard is battery powered                                              |
-| r3 | the keyboard has on-board charging                                           |
-| r4 | the pcb protects the battery from overcharging                               |
-| r5 | the pcb protects the battery from overdischarging                            |
-| r6 | the pcb protects the battery from overcurrents                               |
-| r7 | the pcb charges the battery in a manner that is safe given the its chemistry |
-| r8 | the battery is charged using a usb cable                                     |
-| r9 | the keyboard is split                                                        |
-|    |                                                                              |
+| Id   | Description                                                                  |
+|------+------------------------------------------------------------------------------|
+| r1   | the keyboard is wireless                                                     |
+| r2   | the keyboard is battery powered                                              |
+| r3   | the keyboard has on-board charging                                           |
+| r4.1 | the pcb protects the battery from overcharging                               |
+| r4.2 | the pcb protects the battery from overdischarging                            |
+| r4.3 | the pcb protects the battery from overcurrents                               |
+| r4.4 | the pcb charges the battery in a manner that is safe given the its chemistry |
+| r5   | the battery is charged using a usb cable                                     |
+| r6   | the keyboard is split                                                        |
+|      |                                                                              |
 
 
 * Want to haves
 I want the system to have these features.
 
-| Id | Description                                                                                |
-|----+--------------------------------------------------------------------------------------------|
-| w1 | The case is less than or equal to 6 mm in height                                           |
-| w2 | The case only has a single seam on the bottom separating the top part from the bottom part |
-| w3 | The keyboard can be operated with the usb plugged in and the battery unplugged             |
-| w4 | Both halves can be charged using a single cable going to the usb charger                   |
-| w5 | The keyboard can be operated with usb plugged in and the battery  plugged in               |
-| w6 | the keyboard can be raised                                                                 |
-|    |                                                                                            |
+| Id   | Description                                                                                |
+|------+--------------------------------------------------------------------------------------------|
+| w1   | The case is less than or equal to 6 mm in height                                           |
+| w2   | The case only has a single seam on the bottom separating the top part from the bottom part |
+| w3   | The keyboard can be operated with the usb plugged in and the battery unplugged             |
+| w4   | Both halves can be charged using a single cable going to the usb charger                   |
+| w5   | The keyboard can be operated with usb plugged in and the battery  plugged in               |
+| w6   | the keyboard can be raised                                                                 |
+| w6.1 | the keyboard raising mechanism does not need external parts                                |
+|      |                                                                                            |
