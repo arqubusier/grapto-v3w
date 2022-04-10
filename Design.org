@@ -1,0 +1,113 @@
+* Soc
+
+** nrf51xx
+obsolete
+
+** nrf52xx
+
+https://infocenter.nordicsemi.com/index.jsp?topic=%2Fstruct_nrf52%2Fstruct%2Fnrf52.html
+
+** Devboard
+
+PCA10040 is an identifier for the devboard
+*** Toolchain
+
+
+
+*** Programmer
+
+Segger jlink recommended
+
+edu mini version ca 200 kr
+
+Can use nrf52-dk to program external soc 300-400kr.
+But do not need to buy separate devboard.
+
+could use keyboard as devboard
+
+
+* Battery
+** CR20xx
+c == "lithium", r == "round", NNNN = diameter and height: 2032 means 20 mm high and 3.2 mm tall
+
+cr2032
+3 V 235 mAh
+
+cr2025
+
+thinner than cr2032 but smaller capacity 170 mAh.
+
+** Battery holder
+
+cannot find a "midmount battery holder"
+
+Create own battery clips.
+
+** LiPo
+
+* Power managament
+** Battery disconnect switch (w7)
+All smt slide switches I can find have I_max < 500 mA.
+ - Use switch to turn off transistor that disconnects battery.
+** Battery USB power muxing
+*** None
+- How is resistance of battery compared to mcu?
+  will the battery "steal" all current?
+- Charging management is affected
+  - More current will pass through the charger
+  - Changing of states (CC, CV, etc.) might be negatively affected.
+
+*** diode oring
+
+https://www.mouser.se/datasheet/2/916/PMEG3020CEP-1599881.pdf
+
+If=1A,Tj=25 -> R<360mOhm
+
+
+
+use beefier schottky on the usb side
+
+*** IC powermux
+TPS2110, TPS2111
+https://www.ti.com/lit/ds/symlink/tps2110.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1647950527086&ref_url=https%253A%252F%252Feu.mouser.com%252F
+Around 100mOhm Rds(on)
+
++ more expensive than schottky
+- lower on resistance
++ surge protection (could be useful for usb but might not be usable)
++ current limit -> no fuse for mcu needed
++ added IC dependency on component
+
+*** Custom design
+
++ Cheap components?
++ lower on resistance than Schottky?
+- complexity
+- space
+- Don't know how to limit cross-conductance
+
+* Debug connector
+
+Acn has a 6-pin connector. Pinout?????
+
+
+* ESD
+
+
+
+* Case
+
+** w7
+
+** w6
+
+How much should the keyboard be raised? 7.5 mm at the end.
+
+*** slanted case
+- breaks w1
+
+*** flip up feat
+- breaks w2
+- How to prevent slipping?
+
+*** Tall bumpons at the back, sholt bumpons at the front
