@@ -26,4 +26,5 @@ I want the system to have these features.
 | w5   | The keyboard can be operated with usb plugged in and the battery  plugged in               |
 | w6   | the keyboard can be raised                                                                 |
 | w6.1 | the keyboard raising mechanism does not need external parts                                |
+| w7   | the battery can be disconnected using a switch                                             |
 |      |                                                                                            |
