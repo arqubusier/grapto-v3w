@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "choc")(type "KiCad")(uri "${KIPRJMOD}/keyswitches.pretty")(options "")(descr ""))
+  (lib (name "grapto-v3w")(type "KiCad")(uri "${KIPRJMOD}/grapto-v3w.pretty")(options "")(descr ""))
+)
