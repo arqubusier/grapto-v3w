@@ -1,4 +1,4 @@
-20192925492509876
+20202827105562131
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -85785,9 +85785,51 @@ MX,cherry,gateron,kailh,pg1511,stabilizer,stab
 0
 0
 grapto-v3w
+ACN52840
+
+
+0
+35
+35
+grapto-v3w
+ACN52840_mirror
+
+
+0
+35
+35
+grapto-v3w
+Bourns-SRP0415
+
+
+0
+0
+0
+grapto-v3w
 SW_PG1350
 Kailh "Choc" PG1350 keyswitch
 kailh,choc
 0
 2
 2
+grapto-v3w
+U-DFN2030-6_type_c
+
+
+0
+7
+7
+grapto-v3w
+USB_C_Receptacle_molex_2169900001
+USB Type C, right-angle, SMT, https://datasheet.lcsc.com/szlcsc/1811141824_XKB-Enterprise-U262-161N-4BVC11_C319148.pdf
+USB C Type-C Receptacle SMD
+0
+20
+17
+grapto-v3w
+df65-6P-1.7V
+
+
+0
+8
+6
