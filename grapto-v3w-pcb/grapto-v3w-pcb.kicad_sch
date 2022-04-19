@@ -464,178 +464,178 @@
       (reference "R28") (unit 1) (value "470") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/fa31aab5-552b-4be3-8e50-3a421cc3b567"
-      (reference "SW1") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW1") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/ff4583ce-965e-4497-b865-e039b767f561"
-      (reference "SW2") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW2") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/7b91f57c-cb55-4826-abf2-3818754597d9"
-      (reference "SW3") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW3") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/83ba62cf-bcb3-42fb-88de-31557fe66dc6"
-      (reference "SW4") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW4") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/1d37a4c2-953f-45ab-9b3f-9acb34d46410"
-      (reference "SW5") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW5") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/79cdca7d-f0f5-4908-b89b-24ad6d5ca3ac"
-      (reference "SW6") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW6") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/6fc948ee-a599-4407-a684-9df234f93a6c"
-      (reference "SW7") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW7") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/70ec08d3-5143-41c9-b8e0-7b9dff3db67c"
-      (reference "SW8") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW8") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/2255a835-51d0-4ef0-8499-31b6c125f46b"
-      (reference "SW9") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW9") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/533c5a3e-495f-4918-b077-62009db59cc6"
-      (reference "SW10") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW10") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/48c9f4d6-2548-491f-86ad-2d208bb387c4"
-      (reference "SW11") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW11") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/54818ee2-01cd-4fa9-b882-23d1701ff86d"
-      (reference "SW12") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW12") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/b84e2630-486c-4a62-9351-f87c70f82b70"
-      (reference "SW13") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW13") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/1e33f26a-f77d-499a-93c7-3d0aed128624"
-      (reference "SW14") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW14") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/14694e60-3460-4b6c-a3d1-13907e774287"
-      (reference "SW15") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW15") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/d534f295-c25f-4569-a338-412eaecbbc81"
-      (reference "SW16") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW16") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/eacb635a-a02f-4f4b-ab3f-eb4cc5a4b5c3"
-      (reference "SW17") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW17") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/ef210622-c89b-48cc-9c74-0f0cece9b219"
-      (reference "SW18") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW18") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/1a5b351a-6800-489f-9c47-3281fb2e3aa3"
-      (reference "SW19") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW19") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/fad75f13-88f0-4324-8655-ffb441a0e539"
-      (reference "SW20") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW20") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/df458562-f72b-456e-8968-0eefb5d28447"
-      (reference "SW21") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW21") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/15ec0f36-be3f-4135-9a5c-28e2efbf9ad5"
-      (reference "SW22") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW22") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/cea3a4b0-0688-410e-b76f-aa760943572a"
-      (reference "SW23") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW23") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/9188613b-bcee-4567-86b3-54239564683f"
-      (reference "SW24") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW24") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/a375fe4b-e6e0-4769-8146-973d2eb9b275"
-      (reference "SW25") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW25") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/ee19ec68-a565-445b-ad5d-687b2cd59c49"
-      (reference "SW26") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW26") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/fa61b20a-40bc-431d-a622-62350d4d90e3"
-      (reference "SW27") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW27") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/c242ea5d-5ba8-4e17-b7a9-73f44e8e44aa"
-      (reference "SW28") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW28") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/49126cb1-3295-4f9c-ba5a-a7f1d530269a/495e8cc3-1831-4535-8652-d7c980e64804"
-      (reference "SW29") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW29") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/fa31aab5-552b-4be3-8e50-3a421cc3b567"
-      (reference "SW30") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW30") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/ff4583ce-965e-4497-b865-e039b767f561"
-      (reference "SW31") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW31") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/7b91f57c-cb55-4826-abf2-3818754597d9"
-      (reference "SW32") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW32") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/83ba62cf-bcb3-42fb-88de-31557fe66dc6"
-      (reference "SW33") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW33") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/1d37a4c2-953f-45ab-9b3f-9acb34d46410"
-      (reference "SW34") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW34") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/79cdca7d-f0f5-4908-b89b-24ad6d5ca3ac"
-      (reference "SW35") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW35") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/6fc948ee-a599-4407-a684-9df234f93a6c"
-      (reference "SW36") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW36") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/70ec08d3-5143-41c9-b8e0-7b9dff3db67c"
-      (reference "SW37") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW37") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/2255a835-51d0-4ef0-8499-31b6c125f46b"
-      (reference "SW38") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW38") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/533c5a3e-495f-4918-b077-62009db59cc6"
-      (reference "SW39") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW39") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/48c9f4d6-2548-491f-86ad-2d208bb387c4"
-      (reference "SW40") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW40") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/54818ee2-01cd-4fa9-b882-23d1701ff86d"
-      (reference "SW41") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW41") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/b84e2630-486c-4a62-9351-f87c70f82b70"
-      (reference "SW42") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW42") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/1e33f26a-f77d-499a-93c7-3d0aed128624"
-      (reference "SW43") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW43") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/14694e60-3460-4b6c-a3d1-13907e774287"
-      (reference "SW44") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW44") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/d534f295-c25f-4569-a338-412eaecbbc81"
-      (reference "SW45") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW45") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/eacb635a-a02f-4f4b-ab3f-eb4cc5a4b5c3"
-      (reference "SW46") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW46") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/ef210622-c89b-48cc-9c74-0f0cece9b219"
-      (reference "SW47") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW47") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/1a5b351a-6800-489f-9c47-3281fb2e3aa3"
-      (reference "SW48") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW48") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/fad75f13-88f0-4324-8655-ffb441a0e539"
-      (reference "SW49") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW49") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/df458562-f72b-456e-8968-0eefb5d28447"
-      (reference "SW50") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW50") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/15ec0f36-be3f-4135-9a5c-28e2efbf9ad5"
-      (reference "SW51") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW51") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/cea3a4b0-0688-410e-b76f-aa760943572a"
-      (reference "SW52") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW52") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/9188613b-bcee-4567-86b3-54239564683f"
-      (reference "SW53") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW53") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/a375fe4b-e6e0-4769-8146-973d2eb9b275"
-      (reference "SW54") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW54") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/ee19ec68-a565-445b-ad5d-687b2cd59c49"
-      (reference "SW55") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW55") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/fa61b20a-40bc-431d-a622-62350d4d90e3"
-      (reference "SW56") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW56") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/c242ea5d-5ba8-4e17-b7a9-73f44e8e44aa"
-      (reference "SW57") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW57") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/49126cb1-3295-4f9c-ba5a-a7f1d530269a/495e8cc3-1831-4535-8652-d7c980e64804"
-      (reference "SW58") (unit 1) (value "~") (footprint "choc:SW_PG1350")
+      (reference "SW58") (unit 1) (value "~") (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/a43b2dac-6957-48be-893e-5f9cad8ac66e/8a65d6fe-c43f-4a4e-9804-7437df6fc676"
       (reference "TP1") (unit 1) (value "TestPoint") (footprint "TestPoint:TestPoint_Pad_2.0x2.0mm")
