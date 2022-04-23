@@ -4,7 +4,7 @@
     (thickness 1.6)
   )
 
-  (paper "A4")
+  (paper "A3")
   (layers
     (0 "F.Cu" signal)
     (31 "B.Cu" signal)
@@ -52,7 +52,7 @@
       (dielectric_constraints no)
     )
     (pad_to_mask_clearance 0)
-    (grid_origin 85.45 153.97)
+    (grid_origin 13.45 199.97)
     (pcbplotparams
       (layerselection 0x00010fc_ffffffff)
       (disableapertmacros false)
@@ -346,7 +346,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 0108b600-50e8-4c23-950c-6760200c6f81)
-    (at 85.45 137.82)
+    (at 313.500 145.820 0.000)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -836,7 +836,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 100ab10d-e7d0-46d5-b93d-7cfda839169d)
-    (at 85.45 40.41)
+    (at 147.453 73.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -1043,7 +1043,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 1168db18-cc2f-41e3-8ddb-18666b003d17)
-    (at 150.05 72.71)
+    (at 109.453 91.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -1148,7 +1148,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 13813284-0734-446d-bf61-365abb594643)
-    (at 101.6 40.41)
+    (at 128.453 122.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -1245,7 +1245,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 150f055b-027c-40f5-a5e5-030f4d78e140)
-    (at 182.35 40.41)
+    (at 166.453 109.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -1468,7 +1468,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 1bce5a22-e87d-4a53-8c79-259dfa51c8ba)
-    (at 198.5 40.41)
+    (at 128.453 104.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -2186,7 +2186,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 2519e9de-b61f-4828-a020-8d9b5b7d6d49)
-    (at 150.05 56.56)
+    (at 63.500 145.820 0.000)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -2241,7 +2241,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 253879dc-b623-463f-96ed-9772a4da7aad)
-    (at 85.45 88.86)
+    (at 89.724 151.768)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -2569,7 +2569,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 2ff47ef0-ad9f-43dc-a5f8-26b197a35924)
-    (at 117.75 88.86)
+    (at 171.287 220.227 0.000)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -2975,7 +2975,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 3aefa2cb-3523-4b9c-bf6c-efce086085a7)
-    (at 117.75 170.12)
+    (at 205.713 220.227 0.000)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -3122,7 +3122,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 3e3b7995-e424-428d-8cc8-b81fa5d29456)
-    (at 117.75 56.56)
+    (at 147.453 127.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -3449,7 +3449,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 41ba7b47-0b64-4325-8734-e454b327afd0)
-    (at 133.9 40.41)
+    (at 166.453 127.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -3537,7 +3537,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 45dfe319-0cce-42fe-8151-61a84c1e91ea)
-    (at 117.75 72.71)
+    (at 128.453 140.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -3592,7 +3592,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 493edd59-b902-4396-978f-2cfafa7d079c)
-    (at 133.9 56.56)
+    (at 109.453 109.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -4316,7 +4316,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 5ca8007e-7bef-4752-bc2d-62c386c3f1ca)
-    (at 182.35 72.71)
+    (at 109.453 127.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -4716,7 +4716,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 67fc6f22-016d-45e1-be6c-239d3be1ea5d)
-    (at 150.05 40.41)
+    (at 69.339 160.473)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -4826,7 +4826,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 68b27325-43c3-46f5-87ea-aaff2a0b4c96)
-    (at 166.2 72.71)
+    (at 104.500 88.820 0.000)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -5266,7 +5266,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 73c86a7e-7ec0-437e-aae9-cb105f8162e1)
-    (at 182.35 56.56)
+    (at 147.453 91.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -5996,7 +5996,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 8522b5a5-c1a2-4d82-bb2f-7f2194fc1152)
-    (at 198.5 56.56)
+    (at 166.453 145.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -6218,7 +6218,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 87570bd7-ea07-4c2c-a73a-7ba873443238)
-    (at 117.75 40.41)
+    (at 90.453 131.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -6273,7 +6273,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 878e1bb3-3ec5-4e49-b1a7-0430db6a6b61)
-    (at 133.9 153.97)
+    (at 235.5 43.82)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -6539,7 +6539,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 8b0dd858-9dd9-4d66-8fe2-cf30a89401e1)
-    (at 285.450 -46.030 0.000)
+    (at 272.500 88.820 0.000)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -6911,7 +6911,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 9568b01f-1dc8-4c14-b08b-3aa98b60b3e9)
-    (at 166.2 56.56)
+    (at 90.453 113.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -7016,7 +7016,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp 96021701-131a-4cf4-95ce-688855d3fd40)
-    (at 133.9 72.71)
+    (at 147.453 109.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -7550,7 +7550,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp a4d12e76-b588-42cd-b7a2-c6dce4824135)
-    (at 150.05 88.86)
+    (at 147.453 145.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -7605,7 +7605,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp a4e382cc-19b3-4389-82f5-7fc30fd08c25)
-    (at 101.6 56.56)
+    (at 90.453 77.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -7836,7 +7836,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp a9d3affb-8370-4451-9e0a-e782b4b96d95)
-    (at 166.2 88.86)
+    (at 166.453 91.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -8068,7 +8068,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp af6cce3b-291c-4869-ac14-cda1436397e3)
-    (at 166.2 40.41)
+    (at 90.453 95.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -8215,7 +8215,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp b42e48db-1a75-4710-981c-27452e3a98ad)
-    (at 85.45 72.71)
+    (at 109.453 145.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -8947,7 +8947,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp c828903d-b45a-479b-8d5b-a3dd690dc601)
-    (at 133.9 88.86)
+    (at 128.453 86.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -9044,7 +9044,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp cd7d014d-7de8-4937-a720-ea4e7c1bcce9)
-    (at 85.45 56.56)
+    (at 109.453 73.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -10046,7 +10046,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp e60e6364-ba64-4da3-8faa-c090765e6ad2)
-    (at 198.5 137.82)
+    (at 90.453 77.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -10281,7 +10281,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp eb40f719-b5d7-4a66-a75c-e73646676269)
-    (at 101.6 72.71)
+    (at 185.453 127.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -10588,7 +10588,7 @@
 
   (footprint "Switch_Keyboard_Kailh:SW_Kailh_Choc_V1_1.00u" (layer "F.Cu")
     (tedit 0) (tstamp eeddd65d-a77d-46ca-ad32-6fc646b971e9)
-    (at 101.6 88.86)
+    (at 185.453 145.731)
     (descr "Kailh Choc keyswitch CPG1350 V1 with 1.00u keycap")
     (tags "Kailh Choc Keyswitch Switch CPG1350 V1 Cutout 1.00u")
     (property "Sheetfile" "Matrix.kicad_sch")
@@ -10944,4 +10944,4 @@
   (gr_line (start 216 107) (end 216 180) (layer "Edge.Cuts") (width 0.1) (tstamp c343a859-3200-47d7-a866-9e450a4fa3ab))
 
 )
-  
+ 

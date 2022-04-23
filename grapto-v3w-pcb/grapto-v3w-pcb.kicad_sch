@@ -334,9 +334,6 @@
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/b0e8de7e-7d86-42ea-89e8-e822a690d6d7"
       (reference "J1") (unit 1) (value "Conn_01x06_Female") (footprint "grapto-v3w:df65-6P-1.7V")
     )
-    (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/02be2094-fd60-4d2f-9ad9-43f982c1e650"
-      (reference "J2") (unit 1) (value "USB_C_Receptacle_USB2.0") (footprint "grapto-v3w:USB_C_Receptacle_molex_2169900001")
-    )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/4158ab58-5ee3-4712-818a-0486a3681ccd"
       (reference "J3") (unit 1) (value "USB_C_Receptacle_USB2.0") (footprint "grapto-v3w:USB_C_Receptacle_molex_2169900001")
     )
@@ -345,9 +342,6 @@
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/b0e8de7e-7d86-42ea-89e8-e822a690d6d7"
       (reference "J5") (unit 1) (value "Conn_01x06_Female") (footprint "grapto-v3w:df65-6P-1.7V")
-    )
-    (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/02be2094-fd60-4d2f-9ad9-43f982c1e650"
-      (reference "J6") (unit 1) (value "USB_C_Receptacle_USB2.0") (footprint "grapto-v3w:USB_C_Receptacle_molex_2169900001")
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/4158ab58-5ee3-4712-818a-0486a3681ccd"
       (reference "J7") (unit 1) (value "USB_C_Receptacle_USB2.0") (footprint "grapto-v3w:USB_C_Receptacle_molex_2169900001")
