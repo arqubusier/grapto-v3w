@@ -751,5 +751,11 @@
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/17de1563-6044-45df-85b3-ba774634457c"
       (reference "U14") (unit 1) (value "LM3676SD-3.3") (footprint "Package_SON:WSON-8-1EP_3x3mm_P0.5mm_EP1.6x2.0mm")
     )
+    (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/0af47ca5-dff5-47b9-8a95-e9bd10ee7d47"
+      (reference "U15") (unit 1) (value "Laird_bl653") (footprint "grapto-v3w:Laird_bl653")
+    )
+    (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/0af47ca5-dff5-47b9-8a95-e9bd10ee7d47"
+      (reference "U16") (unit 1) (value "Laird_bl653") (footprint "grapto-v3w:Laird_bl653")
+    )
   )
 )
