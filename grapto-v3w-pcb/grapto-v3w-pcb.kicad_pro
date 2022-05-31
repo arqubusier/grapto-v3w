@@ -152,7 +152,10 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      "no_connect_connected|355600|1752600|7c2c20e4-bc09-4926-b783-17082342babf|00000000-0000-0000-0000-000000000000",
+      "no_connect_connected|508000|1371600|ea6b298e-3d12-4f74-a9db-95f07d7e81c3|00000000-0000-0000-0000-000000000000"
+    ],
     "meta": {
       "version": 0
     },
@@ -396,13 +399,11 @@
         "nets": [
           "/Left/BatteryManagement/batt+",
           "/Left/BatteryManagement/batt-",
-          "/Left/BatteryManagement/p-",
           "/Left/p+",
           "/Left/sysgnd",
           "/Left/vusb",
           "/Right/BatteryManagement/batt+",
           "/Right/BatteryManagement/batt-",
-          "/Right/BatteryManagement/p-",
           "/Right/p+",
           "/Right/sysgnd",
           "/Right/vusb",
@@ -448,12 +449,8 @@
         "microvia_drill": 0.2,
         "name": "USB",
         "nets": [
-          "/Left/USB_N",
-          "/Left/USB_P",
           "/Left/usb1_n",
           "/Left/usb1_p",
-          "/Right/USB_N",
-          "/Right/USB_P",
           "/Right/usb1_n",
           "/Right/usb1_p"
         ],
