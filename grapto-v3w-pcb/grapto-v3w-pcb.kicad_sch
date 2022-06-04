@@ -121,6 +121,12 @@
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/a43b2dac-6957-48be-893e-5f9cad8ac66e/fd7f2ac1-aefe-4965-8317-f9fa896dbccd"
       (reference "C12") (unit 1) (value "22u") (footprint "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
     )
+    (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/960bd56f-dda8-4590-8b9c-5b7f08eaf77b"
+      (reference "C13") (unit 1) (value "22u") (footprint "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+    )
+    (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/960bd56f-dda8-4590-8b9c-5b7f08eaf77b"
+      (reference "C14") (unit 1) (value "22u") (footprint "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+    )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/0cfb8034-15ad-4dcf-a66c-6dd899ef4f7f"
       (reference "C15") (unit 1) (value "22u") (footprint "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
     )
@@ -684,12 +690,6 @@
     )
     (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/40b44c73-2b3c-4591-8214-5579e77f516e"
       (reference "TP22") (unit 1) (value "~") (footprint "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm")
-    )
-    (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/a43b2dac-6957-48be-893e-5f9cad8ac66e/2af36ac0-809b-45f6-b3e8-a037aca66bff"
-      (reference "TP25") (unit 1) (value "TestPoint") (footprint "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm")
-    )
-    (path "/179c966c-85cf-42fe-8833-4d5fa5f90a08/a43b2dac-6957-48be-893e-5f9cad8ac66e/2af36ac0-809b-45f6-b3e8-a037aca66bff"
-      (reference "TP26") (unit 1) (value "TestPoint") (footprint "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm")
     )
     (path "/f90cf80c-f274-43b6-9fc3-8f220769879b/a43b2dac-6957-48be-893e-5f9cad8ac66e/aaf44174-4002-4b1b-ad9d-b28565e665f3"
       (reference "U1") (unit 1) (value "AP9211S-AL") (footprint "grapto-v3w:U-DFN2030-6_type_c")
