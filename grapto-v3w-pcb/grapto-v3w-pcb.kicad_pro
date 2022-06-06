@@ -60,6 +60,7 @@
         "courtyards_overlap|150637988|186877876|253879dc-b623-463f-96ed-9772a4da7aad|8cc73abf-ede7-473a-9fcc-d2967f0cf1a4",
         "courtyards_overlap|151263525|179446584|253879dc-b623-463f-96ed-9772a4da7aad|90d4dd69-349f-4b0e-90a7-7ac1ab6639e8",
         "courtyards_overlap|151263525|179446584|90d4dd69-349f-4b0e-90a7-7ac1ab6639e8|253879dc-b623-463f-96ed-9772a4da7aad",
+        "courtyards_overlap|151813525|184096584|4d896d9b-2ca3-4581-b008-772dcb62fc3f|253879dc-b623-463f-96ed-9772a4da7aad",
         "courtyards_overlap|152513525|188796584|8cc73abf-ede7-473a-9fcc-d2967f0cf1a4|253879dc-b623-463f-96ed-9772a4da7aad",
         "courtyards_overlap|175163865|220242586|2ff47ef0-ad9f-43dc-a5f8-26b197a35924|3aefa2cb-3523-4b9c-bf6c-efce086085a7",
         "courtyards_overlap|175163865|220242586|3aefa2cb-3523-4b9c-bf6c-efce086085a7|2ff47ef0-ad9f-43dc-a5f8-26b197a35924",
@@ -69,7 +70,10 @@
         "courtyards_overlap|203864484|191481050|2a059c40-ca34-4399-be4c-04ecb805a713|6676f0e5-ea39-47f2-87ca-04210469796c",
         "courtyards_overlap|203864484|191481050|6676f0e5-ea39-47f2-87ca-04210469796c|2a059c40-ca34-4399-be4c-04ecb805a713",
         "courtyards_overlap|204423591|187968942|6676f0e5-ea39-47f2-87ca-04210469796c|8857d794-cdd4-4d27-adab-fd497731127e",
-        "courtyards_overlap|206363525|189246584|8857d794-cdd4-4d27-adab-fd497731127e|6676f0e5-ea39-47f2-87ca-04210469796c"
+        "courtyards_overlap|206363525|189246584|8857d794-cdd4-4d27-adab-fd497731127e|6676f0e5-ea39-47f2-87ca-04210469796c",
+        "courtyards_overlap|208449999|163475201|f42553ef-b64d-4d35-a4be-e256a6663926|7d1b36cc-491d-423e-a219-2959f3974f8d",
+        "items_not_allowed|172350000|191220000|e2086e3b-340d-4aba-b171-a649246e747e|00000000-0000-0000-0000-000000000000",
+        "items_not_allowed|184450000|182420000|1a399e5e-92b0-4912-b6be-eedaa43529a1|00000000-0000-0000-0000-000000000000"
       ],
       "meta": {
         "version": 2
@@ -120,8 +124,8 @@
         "max_error": 0.005,
         "min_clearance": 0.127,
         "min_copper_edge_clearance": 0.19999999999999998,
-        "min_hole_clearance": 0.32999999999999996,
-        "min_hole_to_hole": 0.25,
+        "min_hole_clearance": 0.254,
+        "min_hole_to_hole": 0.254,
         "min_microvia_diameter": 0.19999999999999998,
         "min_microvia_drill": 0.09999999999999999,
         "min_silk_clearance": 0.15,
