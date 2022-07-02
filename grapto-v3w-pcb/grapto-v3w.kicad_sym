@@ -482,7 +482,7 @@
         (number "41" (effects (font (size 1.27 1.27))))
       )
       (pin input line (at -43.18 26.67 0) (length 2.54)
-        (name "SIO_01/XL1" (effects (font (size 1.27 1.27))))
+        (name "SIO_00/XL1" (effects (font (size 1.27 1.27))))
         (number "42" (effects (font (size 1.27 1.27))))
       )
       (pin power_in line (at -26.67 36.83 270) (length 2.54)

@@ -26,6 +26,9 @@ But do not need to buy separate devboard.
 could use keyboard as devboard
 
 
+* bl653
+
+
 * Battery
 ** CR20xx
 c == "lithium", r == "round", NNNN = diameter and height: 2032 means 20 mm high and 3.2 mm tall
@@ -111,3 +114,27 @@ How much should the keyboard be raised? 7.5 mm at the end.
 - How to prevent slipping?
 
 *** Tall bumpons at the back, sholt bumpons at the front
+
+* Key pins
+
+| logical name | bl653 pin | nrf52833 pin |
+|--------------+-----------+--------------|
+| col0         |        37 |            7 |
+| col1         |        35 |            6 |
+| col2         |        29 |            8 |
+| col3         |        27 |           11 |
+| col4         |        21 |           16 |
+| col5         |        13 |           20 |
+| row0         |        46 |           28 |
+| row1         |        42 |            0 |
+| row2         |        41 |            1 |
+| row3         |        39 |            5 |
+| row4         |         7 |           32 |
+
+
+
+* flash map
+
+- arduino boot loader
+- soft device? NO zephyr uses it's own bluettooth stack
+- application code 
