@@ -1,6 +1,6 @@
 # Prerequisites
 
-# CAD Development
+## CAD Development
 
 - Install Freecad
 - Install KiCad
@@ -12,7 +12,31 @@
 - Download the usb connector 3d model from https://www.molex.com/molex/part/partModels.jsp?&prodLevel=part&partNo=2169900001&channel=products
   to <repo>/grapto-v3w-pcb/216990-0001_stp/
 
-## Linux
+## FW Development
+
+  git clone git@github.com:arqubusier/zmk.git
+  
+# FW Development
+
+## Flashing
+
+cd <zmk-repo>
+cd app
+west flash 
+cd 
+# FW Development
+
+## Building
+
+west build -p -b grapto_v3w
+
+## Flashing
+
+west flash
+
+# Usage
+
+## Pair on Arch Linux
 
 Set report mode characteristic to report
 
@@ -23,19 +47,3 @@ transport le
 back
 scan on
 connect E9:9E:30:E3:E4:5B
-
-# Flashing
-
-
-## compile and flash using running openocd server
-
-Start openocd server
-
-  root@mycontainer openocd -f openocd.cfg
-  
-Build and flash:
-  
-  reset halt
-  stm32f1x mass_erase 0
-  flash write_bank 0 src/programmable-remote.bin 0
-  reset halt

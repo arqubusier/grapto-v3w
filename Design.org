@@ -25,10 +25,17 @@ But do not need to buy separate devboard.
 
 could use keyboard as devboard
 
-
-* bl653
-
-
+**  bl653
+* PCB
+** Rev 2
+*** Testpoints
+testpoints on critical mcu pin's to determine if reflow is good
+- all vccs
+- grounds
+*** Status led
+*** reset button
+*** bootloader config pin
+*** new power muxing
 * Battery
 ** CR20xx
 c == "lithium", r == "round", NNNN = diameter and height: 2032 means 20 mm high and 3.2 mm tall
@@ -56,10 +63,15 @@ All smt slide switches I can find have I_max < 500 mA.
 *** None
 - How is resistance of battery compared to mcu?
   will the battery "steal" all current?
+  *Don't think this is an issue*
 - Charging management is affected
   - More current will pass through the charger
   - Changing of states (CC, CV, etc.) might be negatively affected.
-
+- System load will share current with battery from charger,
+  charge current will be smaller. It may also vary due to system load.
+- Charger turns off when charge current drops below threshlod. System load
+  may cause charger to stay on when battery is 100% could lead to overcharge.
+*** charger with power path
 *** diode oring
 
 https://www.mouser.se/datasheet/2/916/PMEG3020CEP-1599881.pdf
@@ -89,15 +101,15 @@ Around 100mOhm Rds(on)
 - space
 - Don't know how to limit cross-conductance
 
+** External seconds oscillator reduces current
+
+why?
+https://github.com/joric/nrfmicro/wiki/Components#crystal
 * Debug connector
 
 Acn has a 6-pin connector. Pinout?????
 
-
 * ESD
-
-
-
 * Case
 
 ** w7
@@ -109,7 +121,7 @@ How much should the keyboard be raised? 7.5 mm at the end.
 *** slanted case
 - breaks w1
 
-*** flip up feat
+*** flip up feet
 - breaks w2
 - How to prevent slipping?
 
@@ -132,9 +144,212 @@ How much should the keyboard be raised? 7.5 mm at the end.
 | row4         |         7 |           32 |
 
 
-
 * flash map
 
 - arduino boot loader
 - soft device? NO zephyr uses it's own bluettooth stack
 - application code 
+
+* Troubleshooting
+** Troubleshoot ZMK
+*** Flash simple example
+https://docs.zephyrproject.org/2.7.0/samples/basic/blinky/README.html
+**** on nrf52dk in zephyr tree
+https://docs.zephyrproject.org/latest/develop/getting_started/index.html
+
+cd ~/bin
+wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.14.2/zephyr-sdk-0.14.2_linux-x86_64.tar.gz
+wget -O - https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.14.2/sha256.sum |shasum --check --ignore-missing
+tar -xzvf zephyr-sdk-0.14.2_linux-x86_64.tar.gz
+cd ~/src
+mkdir zephyrproject2
+cd zephyrproject2
+west init
+west update
+west zephyr-export
+cd ~/src/zephyrproject2/zephyr
+pip install --user scripts/requirements.txt
+
+***** blinky
+cd ~/src/zephyrproject2/zephyr
+west build -p auto -b nrf52dk_nrf52832 samples/basic/blinky
+west flash
+
+WORKS led is blinking
+
+***** ble
+west build -p auto -b nrf52dk_nrf52832 samples/bluetooth/peripheral_hids
+west flash
+
+Device shows up as Test HoG mouse in nrfConnect
+
+**** on nrf52dk in zmk tree
+**** on grapto in zephyr tree
+works blinky and ble peripheral example works!
+
+Added grapto_v3w board to zephyr 
+https://github.com/arqubusier/zephyr/tree/grapto_v3w/boards/arm/grapto_v3w
+
+**** on grapto in zmk tree
+
+*** Try flashing zmk onto nrf52dk
+
+soc is nrf52832_qfaa
+
+not working
+**** when building
+FAILED: zephyr/zmk.elf zephyr/zmk.map zephyr/zmk.hex zephyr/zmk.bin zephyr/zmk.uf2 zephyr/zmk.lst zephyr/zmk.stat /home/herman/src/zmk/app/build/zephyr/zmk.map /home/herman/src/zmk/app/build/zephyr/zmk.hex /home/herman/src/zmk/app/build/zephyr/zmk.bin /home/herman/src/zmk/app/build/zephyr/zmk.uf2 /home/herman/src/zmk/app/build/zephyr/zmk.lst /home/herman/src/zmk/app/build/zephyr/zmk.stat 
+: && ccache /home/herman/.local/zephyr-sdk-0.13.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc   zephyr/CMakeFiles/zephyr_final.dir/misc/empty_file.c.obj zephyr/CMakeFiles/zephyr_final.dir/dev_handles.c.obj zephyr/CMakeFiles/zephyr_final.dir/isr_tables.c.obj -o zephyr/zmk.elf  zephyr/CMakeFiles/offsets.dir/./arch/arm/core/offsets/offsets.c.obj  -fuse-ld=bfd  -Wl,-T  zephyr/linker.cmd  -Wl,-Map=/home/herman/src/zmk/app/build/zephyr/zephyr_final.map  -Wl,--whole-archive  app/libapp.a  zephyr/libzephyr.a  zephyr/arch/common/libarch__common.a  zephyr/arch/arch/arm/core/aarch32/libarch__arm__core__aarch32.a  zephyr/arch/arch/arm/core/aarch32/cortex_m/libarch__arm__core__aarch32__cortex_m.a  zephyr/arch/arch/arm/core/aarch32/mpu/libarch__arm__core__aarch32__mpu.a  zephyr/lib/libc/minimal/liblib__libc__minimal.a  zephyr/lib/posix/liblib__posix.a  zephyr/soc/arm/common/cortex_m/libsoc__arm__common__cortex_m.a  zephyr/soc/arm/nordic_nrf/nrf52/libsoc__arm__nordic_nrf__nrf52.a  zephyr/subsys/bluetooth/common/libsubsys__bluetooth__common.a  zephyr/subsys/bluetooth/host/libsubsys__bluetooth__host.a  zephyr/subsys/bluetooth/controller/libsubsys__bluetooth__controller.a  zephyr/subsys/net/libsubsys__net.a  zephyr/subsys/random/libsubsys__random.a  zephyr/drivers/adc/libdrivers__adc.a  zephyr/drivers/clock_control/libdrivers__clock_control.a  zephyr/drivers/gpio/libdrivers__gpio.a  zephyr/drivers/flash/libdrivers__flash.a  zephyr/drivers/entropy/libdrivers__entropy.a  zephyr/drivers/timer/libdrivers__timer.a  modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a  modules/drivers/kscan/libzmk__drivers__kscan.a  modules/drivers/sensor/battery/lib..__app__drivers__sensor__battery.a  -Wl,--no-whole-archive  zephyr/kernel/libkernel.a  -L"/home/herman/.local/zephyr-sdk-0.13.2/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/thumb/v7e-m/nofp"  -L/home/herman/src/zmk/app/build/zephyr  -lgcc  -Wl,--print-memory-usage  zephyr/arch/common/libisr_tables.a  -no-pie  -mcpu=cortex-m4  -mthumb  -mabi=aapcs  -mfp16-format=ieee  -Wl,--gc-sections  -Wl,--build-id=none  -Wl,--sort-common=descending  -Wl,--sort-section=alignment  -Wl,-u,_OffsetAbsSyms  -Wl,-u,_ConfigAbsSyms  -nostdlib  -static  -Wl,-X  -Wl,-N  -Wl,--orphan-handling=warn && cd /home/herman/src/zmk/app/build/zephyr && /usr/bin/cmake -E rename zephyr_final.map zmk.map && /home/herman/.local/zephyr-sdk-0.13.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-objcopy --gap-fill 0xff --output-target=ihex --remove-section=.comment --remove-section=COMMON --remove-section=.eh_frame zmk.elf zmk.hex && /home/herman/.local/zephyr-sdk-0.13.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-objcopy --gap-fill 0xff --output-target=binary --remove-section=.comment --remove-section=COMMON --remove-section=.eh_frame zmk.elf zmk.bin && /usr/bin/python3.10 /home/herman/src/zmk/zephyr/scripts/uf2conv.py -c -f -b 0x0 -o zmk.uf2 zmk.bin && /home/herman/.local/zephyr-sdk-0.13.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump -d -S zmk.elf > zmk.lst && /home/herman/.local/zephyr-sdk-0.13.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-readelf -e zmk.elf > zmk.stat
+Memory region         Used Size  Region Size  %age Used
+           FLASH:      146128 B       448 KB     31.85%
+            SRAM:       42430 B        64 KB     64.74%
+        IDT_LIST:          0 GB         2 KB      0.00%
+usage: uf2conv.py [-h] [-b BASE] [-o FILE] [-d DEVICE_PATH] [-l] [-c] [-D]
+                  [-f FAMILY] [-C]
+                  [INPUT]
+uf2conv.py: error: argument -f/--family: expected one argument
+ninja: build stopped: subcommand failed.
+FATAL ERROR: command exited with status 1: /usr/bin/cmake --build /home/herman/src/zmk/app/build
+?1 ~/src/zmk/app % 
+
+**** only build hex -> skip uf2conv.py
+commented-out this line
+
+#CONFIG_BUILD_OUTPUT_UF2=y
+
+now I can build and flash
+
+
+*** Start from working bl653 board in zmk
+
+
+*** does not enter zmk's main
+
+does not enter zmk's main.c
+ends up in cpu_idle.s after z_arm_configure_static_mpu_regions
+
+**** Need storage partition for bluetooth
+
+**** Increase stack size
+
+Added to Kconfig.defconfig
+
+config MAIN_STACK_SIZE
+    int
+    default 4096
+
+config SYSTEM_WORKQUEUE_STACK_SIZE
+    int
+    default 4096
+
+config ISR_STACK_SIZE
+    int
+    default 4096
+
+
+**** Check partition page alignment
+page size is 4096
+
+0x60000/4096 == 384 -> OK
+
+total size is 512 KibiByte (I Assume, it sayes 512 KBytes on nrf homepage)
+0x80000 == 524288
+524288/1024 == 512 -> OK
+
+**** Mpu config setting
+
+Troubleshooting
+***************
+
+MPU fault while using NVS, or ``-ETIMEDOUT`` error returned
+   NVS can use the internal flash of the SoC.  While the MPU is enabled,
+   the flash driver requires MPU RWX access to flash memory, configured
+   using :kconfig:`CONFIG_MPU_ALLOW_FLASH_WRITE`.  If this option is
+   disabled, the NVS application will get an MPU fault if it references
+   the internal SoC flash and it's the only thread running.  In a
+   multi-threaded application, another thread might intercept the fault
+   and the NVS API will return an ``-ETIMEDOUT`` error.
+
+
+  
+
+**** MPU error
+
+
+void arm_core_mpu_configure_static_mpu_regions(const struct z_arm_mpu_partition
+  static_regions[], const uint8_t regions_num,
+  const uint32_t background_area_start, const uint32_t background_area_end)
+{
+  if (mpu_configure_static_mpu_regions(static_regions, regions_num,
+                 background_area_start, background_area_end) == -EINVAL) {
+
+    __ASSERT(0, "Configuring %u static MPU regions failed\n",
+      regions_num);
+  }
+}
+
+Hits assert!!!
+
+**** partition@XXXXXXXX was wrong
+&flash0 {
+	/*
+	 * Using no boot loader for now.
+	 */
+	partitions {
+		compatible = "fixed-partitions";
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		code_partition: partition@0 {
+			label = "code_partition";
+			reg = <0x00000000 0x60000>;
+		};
+
+		/*
+		 * Storage partition will be used by FCB/LittleFS/NVS
+		 * if enabled.
+		 */
+		storage_partition: partition@60000 { // PROBLEM WAS here
+			label = "storage";
+			reg = <0x00060000 0x00020000>;
+		};
+	};
+};
+
+*** hard fault
+hard fault before main
+
+static int zmk_usb_init(const struct device *_arg) {
+zmk_endpoints_init(
+static int zmk_usb_hid_init(const struct device *_arg)
+
+zmk_battery_init
+
+Skips main here
+static void bg_thread_main(void *unused1, void *unused2, void *unused3)
+
+
+
+** Right half not working
+
+error when trying to program
+
+
+ERROR: Unable to connect to a debugger.
+ERROR: JLinkARM DLL reported an error. Try again. If error condition
+ERROR: persists, run the same command again with argument --log, contact Nordic
+ERROR: Semiconductor and provide the generated log.log file to them.
+NOTE: For additional output, try running again with logging enabled (--log).
+NOTE: Any generated log error messages will be displayed.
+FATAL ERROR: command exited with status 33: nrfjprog --program /home/herman/src/zmk/app/build/zephyr/zmk.hex --sectoranduicrerase -f NRF52 --snr 682314080
+
+*** Is mcu soldered on correctly?
+Resolder
+
+short on swdio to gnd!!!
+
+*** Check swd connections on pcb
+pwr 3v3 ok
+*** monitor swd pins
+*** Try program with usb power only
+*** 
