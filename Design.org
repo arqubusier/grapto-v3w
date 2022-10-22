@@ -54,8 +54,27 @@ cannot find a "midmount battery holder"
 Create own battery clips.
 
 ** LiPo
+*** Posthuman Battery Store 303450
+https://www.aliexpress.com/item/4001059965613.html?spm=a2g0o.productlist.0.0.3ab07ba7361mRI&algo_pvid=aeceef1f-3537-4182-befb-9a70af038199&algo_exp_id=aeceef1f-3537-4182-befb-9a70af038199-0&pdp_ext_f=%7B%22sku_id%22%3A%2210000013978904697%22%7D&pdp_npi=2%40dis%21USD%213.22%213.03%21%21%210.76%21%21%402100bb5116653295257577298e938d%2110000013978904697%21sea&curPageLogUid=UTAPebuXpmQH
+Brand Name: ANLB
+Type: Li-polymer
+Set Type: Batteries Only
+Model Number: 303450
+Origin: Mainland China
+Nominal Capacity: 600mAh
+Bundle: Bundle 1
+Certification: CE
+Size: 50*34*3.0mm
+Replacement Battery: Yes
+Battery Number: 1pcs-2PCS
+Charging Voltage: 3.7~4.2V
+
 
 * Power managament
+
+** Regulator
+nrf52840 high voltage mode 2.5 v - 5.5 V
+QFN48 HAS NO  HIGH VOLTAGE MODE
 ** Battery disconnect switch (w7)
 All smt slide switches I can find have I_max < 500 mA.
  - Use switch to turn off transistor that disconnects battery.
@@ -72,6 +91,42 @@ All smt slide switches I can find have I_max < 500 mA.
 - Charger turns off when charge current drops below threshlod. System load
   may cause charger to stay on when battery is 100% could lead to overcharge.
 *** charger with power path
+**** MCP738x
+https://www.mouser.se/datasheet/2/268/20001984g-846362.pdf
+- Not sure if battery in parallel with system ok.
+**** BQ24073 WINNER!
+https://www.mouser.se/ProductDetail/Texas-Instruments/BQ24073RGTR?qs=ZV%2Fxhq4oszqX%2F3rMt%2FwIsw%3D%3D
+or BQ24072
+- 1.5 A charge (wall adapter)
+- Reverse current, short-circuit and thermal
+protection
+- inrush limit
+**** BQ25616
+https://www.mouser.se/ProductDetail/Texas-Instruments/BQ25616JRTWT?qs=GBLSl2Akiruk9chMI62zkQ%3D%3D
+- 9.5 uA standby
+- High input voltage
+- powerpath
+- usb otg
+- switched
+- 3 A charge
+**** BQ24081
+https://www.mouser.se/ProductDetail/Texas-Instruments/BQ24081DRCTG4?qs=sjHPNSjTyn1tPpHjbn571g%3D%3D
+- Batter in parallel with system
+- Safety timer
+- 1 A charge
+**** BQ25606
+https://www.mouser.se/ProductDetail/Texas-Instruments/BQ25606RGET?qs=5aG0NVq1C4yFkgOQCbyUyg%3D%3D
+- powerpath
+- usb otg
+- switched
+- 3 A charge
+- 58 uA standby current
+- inrush current limit
+**** BQ24195
+https://datasheet.lcsc.com/lcsc/1912112237_Texas-Instruments-BQ24195LRGER_C417486.pdf
+
+
+
 *** diode oring
 
 https://www.mouser.se/datasheet/2/916/PMEG3020CEP-1599881.pdf
