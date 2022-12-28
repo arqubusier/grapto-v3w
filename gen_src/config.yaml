@@ -1,0 +1,305 @@
+units:
+  choc_hole_side: 13.8
+  pcb_perim: 1
+  usbc_y: 6.7
+  usbc_x: 9.24
+points:
+  mirror:
+    ref: matrix_outer_r1
+    distance: -cx
+  key:
+    padding: cy
+    spread: cx
+  zones:
+    matrix:
+      anchor:
+        # Shift to get to center in kicad
+        shift: [240,-180]
+        rotate: 0
+      columns:
+        outer:
+          rows:
+            r5:
+              skip: true
+            r4:
+              skip: true
+            r3:
+              from: col5
+              to: row1
+            r2:
+              from: col5
+              to: row2
+            r1:
+              from: col5
+              to: row3
+        pinky:
+          rows:
+            r5:
+              skip: true
+            r4:
+              from: col4
+              to: row0
+            r3:
+              from: col4
+              to: row1
+            r2:
+              from: col4
+              to: row2
+            r1:
+              from: col4
+              to: row3
+        ring:
+          key:
+            stagger: 0
+          rows:
+            r5:
+              from: col3
+              to: row0
+            r4:
+              from: col3
+              to: row1
+            r3:
+              from: col3
+              to: row2
+            r2:
+              from: col3
+              to: row3
+            r1:
+              from: col5
+              to: row4
+        middle:
+          key:
+            stagger: 5
+          rows:
+            r5:
+              from: col2
+              to: row0
+            r4:
+              from: col2
+              to: row1
+            r3:
+              from: col2
+              to: row2
+            r2:
+              from: col2
+              to: row3
+            r1:
+              from: col4
+              to: row4
+        index:
+          key:
+            stagger: -5
+          rows:
+            r5:
+              from: col1
+              to: row0
+            r4:
+              from: col1
+              to: row1
+            r3:
+              from: col1
+              to: row2
+            r2:
+              from: col1
+              to: row3
+            r1:
+              from: col3
+              to: row4
+        inner:
+          key:
+            stagger: -4
+          rows:
+            r5:
+              from: col0
+              to: row0
+            r4:
+              from: col0
+              to: row1
+            r3:
+              from: col0
+              to: row2
+            r2:
+              from: col0
+              to: row3
+            r1:
+              skip: true
+      rows:
+        r1:
+          key:
+        r2:
+          key:
+        r3:
+          key:
+        r4:
+          key:
+        r5:
+          key:
+    thumbfan:
+      key:
+        spread: 0
+        padding: 61
+        splay: -20.72
+      anchor:
+        ref: matrix_inner_r2
+        shift: [-11.25, -81.28]
+      columns:
+        near:
+          key:
+            splay: -11.5
+          rows:
+            r1:
+              from: col2
+              to: row4
+        home:
+          rows:
+            r1:
+              from: col1
+              to: row4
+        far:
+          rows:
+            r1:
+              from: col0
+              to: row4
+      rows:
+        # the first row is only used to define the origin of rotation
+        thumb_origin:
+          skip: true
+        r1: null
+
+outlines:
+  $params: [ side_ ]
+  $args: [ "" ]
+  #$args: [ mirror_ ]
+  holes:
+    - where: true
+      what: rectangle
+      size: choc_hole_side
+
+  pcb_perimiter:
+    $params: [ side_ ]
+    $args: [ "" ]
+    part1:
+      operation: add
+      what: polygon
+      points:
+        - ref: side_matrix_outer_r1
+          shift: [-cx/2-2.8, -cy/2-0.5]
+        - ref: side_matrix_outer_r3
+          shift: [-cx/2-2.8, +cy/2+pcb_perim]
+        - ref: side_matrix_pinky_r4
+          shift: [-cx/2-pcb_perim, +cy/2+pcb_perim]
+        - ref: side_matrix_ring_r5
+          shift: [-cx/2-pcb_perim, +cy/2+pcb_perim]
+        - ref: side_matrix_middle_r5
+          shift: [-cx/2-pcb_perim, +cy/2+pcb_perim]
+        - ref: side_matrix_middle_r5
+          shift: [+cx/2+pcb_perim, +cy/2+pcb_perim]
+        - ref: side_matrix_middle_r5
+          shift: [+cx*2.5+pcb_perim, +cy/2+pcb_perim]
+        - ref: side_thumbfan_far_r1
+          shift: [0, +cy]
+        - ref: side_thumbfan_far_r1
+          shift: [+cx/2+2.8, +cy/2+pcb_perim]
+        - ref: side_thumbfan_far_r1
+          shift: [+cx/2+2.8, -cy/2-0.5]
+      bound: false
+
+  pcb_edge:
+    $params: [ side_ ]
+    $extends: outlines.pcb_perimiter
+    $args: [ "" ]
+
+    usbc:
+      what: rectangle
+      where: 
+        - ref: side_matrix_middle_r5
+          shift: [+cx*2, +cy/2+pcb_perim-usbc_y/2+0.5]
+      size: [usbc_x, usbc_y+1]
+      operation: subtract
+
+    screw1:
+      what: rectangle
+      corner: 2.9
+      size: [6,16]
+      where:
+        - ref: side_matrix_inner_r2
+          shift: [18.07, -48.90-5]
+      operation: subtract
+    screw2:
+      what: rectangle
+      corner: 2.9
+      size: [16,6]
+      where:
+        - ref: side_matrix_inner_r2
+          shift: [43.44+5, -21.22]
+      operation: subtract
+    screw3:
+      what: rectangle
+      corner: 2.9
+      size: [16,6]
+      where:
+        - ref: side_matrix_inner_r2
+          shift: [16.19+5, 46.34]
+      operation: subtract
+    screw4:
+      what: rectangle
+      corner: 2.9
+      size: [16,6]
+      where:
+        - ref: side_matrix_inner_r2
+          shift: [-73.27-5, 52.81]
+      operation: subtract
+    screw5:
+      what: rectangle
+      corner: 2.9
+      size: [6,16]
+      where:
+        - ref: side_matrix_inner_r2
+          shift: [-73.26, -26.67-5]
+      operation: subtract
+
+  pcb_edge_:
+    $extends: outlines.pcb_edge
+    $args: [""]
+
+  pcb_edge_mirror_:
+    $extends: outlines.pcb_edge
+    $args: ["mirror_"]
+
+  plate:
+    - pcb_perimiter
+    - -holes
+
+pcbs.graptov3w:
+  $params: [ side_ ]
+  $args: [ "" ]
+  outlines:
+    - outline: pcb_edge_side_
+      layers: Edge.Cuts
+
+  footprints:
+    - what: choc
+      where: true
+      params:
+        from: '{{from}}'
+        to: '{{to}}'
+
+    - what: usbc
+      where:
+        - ref: side_matrix_middle_r5
+          shift: [+cx*2, +cy/2+pcb_perim]
+      params:
+        reverse: false,
+        symmetric: false,
+        A: ""
+        B: ""
+        C: ""
+        D: ""
+
+pcbs.grapto-v3w-left:
+  $extends: pcbs.graptov3w
+  $args: [ "" ]
+
+pcbs.grapto-v3w-right:
+  $extends: pcbs.graptov3w
+  $args: [ "mirror_" ]
