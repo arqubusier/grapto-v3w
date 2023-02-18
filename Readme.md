@@ -14,8 +14,37 @@
 
 ## FW Development
 
+  # src
   git clone git@github.com:arqubusier/zmk.git
-  
+
+  # packages
+  sudo pacman -S git \
+    autoconf \
+    automake \
+    ccache \
+    dfu-util \
+    libtool \
+    make \
+    gcc \
+    ninja \
+    cmake \
+
+  pip install --user west
+
+  # toolchains
+  export ZSDK_VERSION=0.13.2
+wget -q "https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v${ZSDK_VERSION}/zephyr-toolchain-arm-${ZSDK_VERSION}-linux-x86_64-setup.run" && \
+    sh "zephyr-toolchain-arm-${ZSDK_VERSION}-linux-x86_64-setup.run" --quiet -- -d ~/.local/zephyr-sdk-${ZSDK_VERSION} && \
+    rm "zephyr-toolchain-arm-${ZSDK_VERSION}-linux-x86_64-setup.run"
+
+  # west setup
+  cd <zmk-repo>
+  west init -l app/
+  west update
+  west zephyr-export
+  pip install --user -r zephyr/scripts/requirements-base.txt
+
+  yay -S nrf5x-command-line-tools
 # FW Development
 
 ## Flashing
