@@ -3200,6 +3200,18 @@
     (pin "2" (uuid cb6f88f8-d28c-4835-8ac0-c6de233cbbeb))
   )
 
+  (sheet (at 19.685 75.565) (size 31.75 34.29) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid 7c2d97fa-e0bc-4f22-bbed-05e9c40d610a)
+    (property "Sheet name" "matrix" (id 0) (at 19.685 74.8534 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "../grapto-v3w-shared/matrix.kicad_sch" (id 1) (at 19.685 110.4396 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
   (sheet (at 44.45 25.4) (size 23.495 22.86) (fields_autoplaced)
     (stroke (width 0.1524) (type solid) (color 0 0 0 0))
     (fill (color 0 0 0 0.0000))

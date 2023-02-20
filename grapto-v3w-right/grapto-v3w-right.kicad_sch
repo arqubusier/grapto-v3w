@@ -23,7 +23,7 @@
   (sheet_instances
     (path "/" (page "1"))
     (path "/8134e62a-92f8-41a1-9193-208391a0de17" (page "2"))
-    (path "/8134e62a-92f8-41a1-9193-208391a0de17/a43b2dac-6957-48be-893e-5f9cad8ac66e" (page ""))
+    (path "/8134e62a-92f8-41a1-9193-208391a0de17/a43b2dac-6957-48be-893e-5f9cad8ac66e" (page "#"))
   )
 
   (symbol_instances
