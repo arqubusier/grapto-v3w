@@ -26,6 +26,29 @@ But do not need to buy separate devboard.
 could use keyboard as devboard
 
 **  bl653
+** ACN52840
+https://www.mouser.se/datasheet/2/871/aconno_02052021_ACN52840-2005184.pdf
+
+*** External seconds oscillator reduces current
+
+why?
+https://github.com/joric/nrfmicro/wiki/Components#crystal
+*** System design
+VDD
+VBUS
+GND
+USBP
+USBN
+swdio to header
+swdclk to header
+swo to header
+keymatrix 5 row, 6 col
+Bootloader config pin
+Status led
+reset button
+FASTCHG enable
+( built in 32.768 kHz XTAL (20-30 ppm) )
+
 * PCB
 ** Rev 2
 *** Testpoints
@@ -98,9 +121,97 @@ https://www.mouser.se/datasheet/2/268/20001984g-846362.pdf
 https://www.mouser.se/ProductDetail/Texas-Instruments/BQ24073RGTR?qs=ZV%2Fxhq4oszqX%2F3rMt%2FwIsw%3D%3D
 or BQ24072
 - 1.5 A charge (wall adapter)
-- Reverse current, short-circuit and thermal
-protection
+- input overvoltage
+- Reverse current protection
+- output short-circuit protection
+- thermal protection
+- reverse current protection
 - inrush limit
+- safety timers
+[[/home/herman/src/grapto-v3w/Design.org_20230225_152412_DwkI3X.png]]
+***** Charging
+[[/home/herman/src/grapto-v3w/Design.org_20230225_154120_Tkn55A.png]]
+- charge rate
+- battery charge voltage 4.2, BQ24072, BQ24073, BQ24075, BQ24075
+- charge rate I_charge set by ISET
+- CHG on (low), means charging
+- Flashing CHG, means error during charge
+***** Current limit
+During poweron, input current limit is first set to 100mA.
+En1, EN2, R_ilim
+***** Power management
+- EN1 == EN2 == hi, in power ON, standby mode, battery power, input power disconnected
+- Bq24073, out is regulated when IN present
+  - DPPM Mode: if Vout starts dropping, charing current will be reduced
+  - Battery Supplement mode: if charging current drops to zero and system load
+    is greater than input current limit, OUT will not be regulated, but the
+    battery will be connected directly to out
+  - When no input source is present, battery is directly connected to out and no
+    regulation is performed.
+- Input current is current limited compliant with usb
+- Input cap less than 10uF to limit inrush current
+- Input current level controlled either by EN1/EN2 or resistor between ILIM an VSS.
+***** Testing
+Disconnect battery, connect charger.
+1. OUT == ???
+
+Connect battery, connect charger.
+1. Input current is less than or equal to 100 mA.
+2. CHG is on, PGOOD is on
+3. Heat of ic is ok.
+5. when charging is done CHG turns off
+6. battery voltage is 4.2 V
+***** Charging
+max(current limit, I_chg)
+
+I_chg = K_iset / R_iset
+
+TD pin should be floating or low to enable charge termination.
+
+TMR controls charge timers. Leave floating to use default values.
+
+TS, battery pack temperature monitoring, connect 10 kOhm resistor from TS to VSS
+to enable charging without temperature monitoring.
+
+ILIM  Leaving ILIM unconnected disables all charging.
+
+***** Thermal
+Connect thermal pad to vss
+
+thermal performance 
+θ_JA = (T_J - T) / P 
+
+P = [V(IN) – V(OUT)] × [I(OUT) + I(BAT)] + [V(OUT) – V(BAT)] × I(BAT)
+
+eg.
+
+P = [5.5 - 4.4]*0.500+[4.4-3.4]*0.500 W = 1.05 W
+
+Test charging at 400 mA and see if battery or charger does not get too warm.
+
+***** System design
+BAT
+!CE Connect to logic low to enable charging
+!CHG Connect to led with resistor, indicates charging, flashes if error during charging
+EN1 connect to logic low
+EN2 connect to mcu, logic 1 FASTCHG enables 500mA current limit
+ILIM Connect to resistor RILIM to ground = KILIM / RILIM
+  RILIM = KILIM/ILIM ~ 1525/0.5 = 3.05 kOhm, Use 3.3 kOhm for smaller current
+  limit
+IN connect to VBUS, add cap less than 10uF to limit inrush current
+ISET connecto to resistor RISET to grount = KISET/RISET
+  RISET = KISET/ISET ~ 890/0.4 Ohm = 2.225 KOhm, use 2.2 kOhm resistor
+ITERM leave unconnected for default termination current
+OUT connect to system, 4.4 V or battery voltage
+!PGOOD connect to led with resistor, indicates good power source
+SYSOFF Connect Sysoff to logic low to enable battery output
+TD Connect to ground to enable charger termination
+thermal pad connect to ground
+TMR leave unconnected for default timer values
+TS Connect 10 KOhm resistor to ground (enable charging without batt temp sensor)
+VSS connect to ground.
+
+
 **** BQ25616
 https://www.mouser.se/ProductDetail/Texas-Instruments/BQ25616JRTWT?qs=GBLSl2Akiruk9chMI62zkQ%3D%3D
 - 9.5 uA standby
@@ -156,10 +267,6 @@ Around 100mOhm Rds(on)
 - space
 - Don't know how to limit cross-conductance
 
-** External seconds oscillator reduces current
-
-why?
-https://github.com/joric/nrfmicro/wiki/Components#crystal
 * Debug connector
 
 Acn has a 6-pin connector. Pinout?????
