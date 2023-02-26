@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "grapto-v3w")(type "KiCad")(uri "/home/herman/src/grapto-v3w/grapto-v3w-shared/grapto-v3w.pretty")(options "")(descr ""))
+)
