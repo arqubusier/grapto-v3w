@@ -49,6 +49,85 @@ reset button
 FASTCHG enable
 ( built in 32.768 kHz XTAL (20-30 ppm) )
 
+* BLE
+** GAP
+Generic access profile - how to access link layer
+
+*** Advertisment
+
+- Advertisement packets sent periodically
+
+To save battery while feeling responsive, the device can start with a short
+interval and decrease if there is no connection.
+
+**** Advertisement properties
+- Connectable
+- scannable
+- directed
+
+**** Advertisement types
+
+| Packet           | Connectable | Scannable | Directed | Example device                                               |
+|------------------+-------------+-----------+----------+--------------------------------------------------------------|
+| ADV_IND          | yes         | yes       | yes      |                      |
+| ADV_DIRECT_IND   | yes         | no        | yes      | smart watch, keyboard, send to specific known central        |
+| ADV_NON_CONN_IND | no          | no        | no       |                                                              |
+| ADV_SCAN_ID      | no          | yes       | no       | simple sensor, use central can use send request to read data |
+|                  |             |           |          |                                                              |
+
+
+
+*** Scanning
+
+Scanning is done periodically with a certain
+- interval
+- duration
+
+Passive scanning
+
+Active scanning
+
+*** Connection
+
+
+** GAP Roles
+Keyboard will have the Peripheral role.
+
+PC is the central?
+
+peripheral does advertising
+
+*** Connection
+
+- Peripheral can only be connected to one central a time
+
+  1. peripheral advertises
+  2. Central responds on advertising channel
+  3. Connection is formed
+
+** GATT
+access to data layer
+
+Hierarchical table
+
+Table of:
+- Profile
+  - Services
+    - characteristics (single data point)
+
+Peripheral is a GATT server, owns the table
+
+*** Characteristics
+
+Operations:
+- command
+- request
+  - response
+- notification
+...
+
+
+
 * PCB
 ** Rev 2
 *** Testpoints
@@ -93,11 +172,179 @@ Battery Number: 1pcs-2PCS
 Charging Voltage: 3.7~4.2V
 
 
-* Power managament
+*** How far to discharge
 
-** Regulator
-nrf52840 high voltage mode 2.5 v - 5.5 V
-QFN48 HAS NO  HIGH VOLTAGE MODE
+Unclear, no datasheet on battey
+
+3-3.6 V
+https://lygte-info.dk/info/BatteryLowVoltage%20UK.html
+
+* Power managament
+https://circuitdigest.com/article/what-is-ldo-low-dropout-voltage-regulator-and-its-significance-in-battery-operated-devices
+
+
+
+transient repsonse, rf sending
+dropout voltage
+** Detect and turn off at low battery
+
+Use voltage divider and adc of controller, compare battery with voltage
+divider. if adc is to low go into deep sleep. Wake up with reset button.
+
+Use voltage regulator at 3.0V. Go to deep sleep when when at 3.0v.
+
+*** Chip based soloution
+
+https://electronics.stackexchange.com/questions/174781/low-battery-detection
+https://www.mouser.se/datasheet/2/115/DIOD_S_A0002900337_1-2541999.pdf
+
+MIC803 4.5 uA
+MIC803-30D4VC3 vcc 3.3v vth 3
+MIC803-29D4VC3 vcc 3.3 vth 2.93
+https://www.mouser.se/datasheet/2/115/DIOD_S_A0002900337_1-2541999.pdf 
+
+https://www.mouser.se/ProductDetail/621-AP9211SA-AN-HAC7
+Has cutoff at 3.2, can be placed inline with battery
+
+
+** Power profile
+https://devzone.nordicsemi.com/power/w/opp/2/online-power-profiler-for-bluetooth-le
+
+
+Dadv = 1/24
+Dactive = 4/24
+Dsleep = 19/24
+
+Iavg = Dadv*Iadv+Dsleep*Isleep+DActive*Iactive = 1/24*100+19/24*30+4/24*700 uA =
+150 uA
+
+During advertising (not bonded) for rev1. But I am not able to pair. Also could not
+cleanly cut trace so there is still 1M resistance in parallell with Am meter. So
+values might be marginally larger. When not transmitting the average current is 2uA.
+
+For 1 period, 100ms, average current ca 100us. Nrf power profiler shows 93 us so
+not too far off.
+[[/home/herman/src/grapto-v3w/Design.org_20230304_170522_qxGNEL.png]]
+
+** Keyboard scenarios
+https://devzone.nordicsemi.com/power/w/opp/2/online-power-profiler-for-bluetooth-le
+
+*** Not connected/Paired
+50 ms interval
+*** Reconnection (ADV_DIRECT_IND)
+
+Read more here
+file:///home/herman/Downloads/HOGP_SPEC_V10.pdf
+20 h/day
+{
+  "chip": "2",
+  "voltage": "3",
+  "dcdc": "on",
+  "lf_clock": "lfxo",
+  "radio_tx": "0",
+  "ble_type": "adv",
+  "ble_int": "500",
+  "tx_size": "0"
+}
+not sure if these settings are correct but this gives 21 uA
+
+Configure long connection interval, but trigger reconnection/reduce interval
+when pressing a button.
+
+*** Connected, sending keypresses
+1-4 hours at a time, a few times during the day.
+
+go to reconnection mode after 20 min.
+
+{
+  "chip": "2",
+  "voltage": "3",
+  "dcdc": "on",
+  "lf_clock": "lfxo",
+  "radio_tx": "0",
+  "ble_type": "con",
+  "ble_int": "7.5",
+  "tx_size": "6",
+  "rx_size": "0",
+  "phy": "1mbps",
+  "slave_latency": "0",
+  "central_ppm": "20",
+  "peripheral_ppm": "20"
+}
+
+650uA
+
+
+** Which Regulator type?
+
+Optimize for reconnection mode 21uA, round up to 50uA
+
+
+
+** LDO
+https://www.eevblog.com/forum/projects/choosing-an-appropriate-ldo-for-low-power-device/
+https://electronics.stackexchange.com/questions/275605/choosing-the-right-power-regulator-for-battery-powered-designs
+https://devzone.nordicsemi.com/f/nordic-q-a/75124/is-this-robust-nrf52840-1-8v-low-power-mode-driving-rgb-led-from-3-3v
+
+Is it better to use ldo than switchmode
+
+Power approximation for LDO PD = (VIN – VOUT) × IOUT 
+for battery (4.2-3.0)*I = 0.9*I when fully charged
+nominally (3.7-3.0)*I = 0.5*I
+
+for 50uA, PD = 25uW, n=.
+P = 150uA*3V = 450 uW
+for 150uA, PD = 75uW, n=450/(75+450)=0.85
+
+lower quiescent current than spms.
+
+fewer passives, smaller board space
+
+THINK ABOUT THE DROPOUT VOLTAGE
+
+transient response
+
+*** TPS783xx
+https://jlcpcb.com/partdetail/TexasInstruments-TPS78330DDCR/C118221
+
+Iq 0.5uA
+
+** Switchmode regulators
+
+power approximation VIN = VOUT/Efficienccy = VOUT/0.9
+Vregulator = Vout*(1/efficiency - 1) = Vout*(1/0.9 - 1) = Vout*0.11
+
+for 50uA, 3.7V: VIN = 50*3.7*0.11 uW = 20uW
+
+
+https://jlcpcb.com/partdetail/TexasInstruments-TPS63051RMWR/C139412
+https://jlcpcb.com/partdetail/TexasInstruments-TPS63001DRCR/C28060
+
+*** TPS62822
+In stock at jlcpcb
+https://jlcpcb.com/partdetail/TexasInstruments-TPS62822DLCR/C473385
+
+see table on page 10
+recommended output filter 0.47uH 22uF
+
+r3, (PG) when not used can be left floating
+
+*** TPS54331DR
+To low minimum
+input volgage
+*** TPS6226x
+For 1 cell lion batteries
+
+small inductor 2.2 uH required
+https://www.ti.com/cn/lit/ds/symlink/tps62260.pdf?ts=1677701886702&ref_url=https%253A%252F%252Fjlcpcb.com%252F
+
+18 uA Iq
+Rdson 150mOhm
+
+*** TPS6242x
+https://www.ti.com/cn/lit/ds/symlink/tps62420.pdf?ts=1677701846178&ref_url=https%253A%252F%252Fjlcpcb.com%252F
+
+*** TPS6305x
 ** Battery disconnect switch (w7)
 All smt slide switches I can find have I_max < 500 mA.
  - Use switch to turn off transistor that disconnects battery.
