@@ -848,7 +848,7 @@
     (property "Value" "1u" (id 1) (at 181.356 55.0422 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "LED_SMD:LED_1210_3225Metric_Pad1.42x2.65mm_HandSolder" (id 2) (at 179.4002 57.15 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (id 2) (at 179.4002 57.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 178.435 53.34 0)

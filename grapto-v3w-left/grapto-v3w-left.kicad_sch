@@ -41,7 +41,7 @@
       (reference "#FLG0111") (unit 1) (value "~") (footprint "")
     )
     (path "/2abfd27e-4d76-4b23-8267-7956197c0f1c/a43b2dac-6957-48be-893e-5f9cad8ac66e/c577ba3d-9ad8-4a2a-80f5-b18aee2bf735"
-      (reference "C1") (unit 1) (value "1u") (footprint "LED_SMD:LED_1210_3225Metric_Pad1.42x2.65mm_HandSolder")
+      (reference "C1") (unit 1) (value "1u") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
     )
     (path "/2abfd27e-4d76-4b23-8267-7956197c0f1c/f01a9265-55fe-47c8-ac46-cce90b514b94"
       (reference "C2") (unit 1) (value "120p") (footprint "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
@@ -157,14 +157,14 @@
     (path "/2abfd27e-4d76-4b23-8267-7956197c0f1c/7c2d97fa-e0bc-4f22-bbed-05e9c40d610a/6e699d13-3984-45b5-8d1b-7fa49e58f2fc"
       (reference "D29") (unit 1) (value "~") (footprint "Diode_SMD:D_SOD-123")
     )
-    (path "/2abfd27e-4d76-4b23-8267-7956197c0f1c/c6c6626b-0f37-4249-938f-93bed4a96108"
-      (reference "D30") (unit 1) (value "LED_RGBA") (footprint "grapto-v3w:LTST-S310F3WT")
+    (path "/2abfd27e-4d76-4b23-8267-7956197c0f1c/407eb4bb-a0cb-4479-b868-76b2f22ebcb3"
+      (reference "D30") (unit 1) (value "LED_ARGB") (footprint "grapto-v3w:23-23B-R6GHBHC-A01-2A")
     )
-    (path "/2abfd27e-4d76-4b23-8267-7956197c0f1c/7b134193-c883-4170-b20b-e0764db49caf"
-      (reference "D31") (unit 1) (value "LED_RGBA") (footprint "grapto-v3w:LTST-S310F3WT")
+    (path "/2abfd27e-4d76-4b23-8267-7956197c0f1c/5af05c4b-99e8-4b0a-9556-59f0982b9ade"
+      (reference "D31") (unit 1) (value "LED_ARGB") (footprint "grapto-v3w:23-23B-R6GHBHC-A01-2A")
     )
-    (path "/2abfd27e-4d76-4b23-8267-7956197c0f1c/49afdd0a-bd13-42e1-b6d9-ea1510ce0e21"
-      (reference "D32") (unit 1) (value "LED_RGBA") (footprint "grapto-v3w:LTST-S310F3WT")
+    (path "/2abfd27e-4d76-4b23-8267-7956197c0f1c/a916197c-d6f4-4a0f-be19-c9f7686de410"
+      (reference "D32") (unit 1) (value "LED_ARGB") (footprint "grapto-v3w:23-23B-R6GHBHC-A01-2A")
     )
     (path "/2abfd27e-4d76-4b23-8267-7956197c0f1c/a43b2dac-6957-48be-893e-5f9cad8ac66e/4233c5a5-7a8c-4f20-bcde-4b6cdecc0bcf"
       (reference "F3") (unit 1) (value "Polyfuse") (footprint "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder")

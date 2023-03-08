@@ -283,28 +283,9 @@ pcbs.graptov3w:
     - what: choc
       where: true
       params:
+        hotswap: true
         from: '{{from}}'
         to: '{{to}}'
-
-    - what: usbc
-      where:
-        - ref: side_matrix_middle_r5
-          shift: [+cx*2-0, cy/2+2.5]
-      params:
-        reverse: false
-        symmetric: false
-        A1: sysgnd
-        A4: vbus_no_fuse
-        A5: cc1
-        A6: usb1_p
-        A7: usb1_n
-        A8: ""
-        A9: vbus_no_fuse
-        A12: sysgnd
-        B5: cc2
-        B6: usb1_p
-        B7: usb1_n
-        B8: ""
 
 pcbs.grapto-v3w-left:
   $extends: pcbs.graptov3w
