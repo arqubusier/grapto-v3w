@@ -2036,10 +2036,6 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 204ad7e4-b1a0-45a9-a382-31f0d7625f86)
   )
-  (label "vusb" (at 92.71 166.37 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 20fe8f9d-0021-48b3-86c8-6bf48a4a296a)
-  )
   (label "sysgnd" (at 197.485 121.92 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 216e4d53-91d1-4d54-b1da-f3412f9fb7aa)
@@ -2310,6 +2306,13 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
+  (global_label "vbus_fused" (shape input) (at 69.85 139.7 90) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 56004c85-367e-43c4-827a-55a19b7168bc)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 69.85 126.3925 90)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
   (global_label "cc2" (shape input) (at 64.135 147.32 270) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 5610d99a-faa2-4cec-8fe5-eab3cdc42388)
@@ -2329,6 +2332,13 @@
     (uuid 6a7f0834-bc83-4b34-8b44-5934aec84324)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 220.2656 166.9083 90)
       (effects (font (size 1.27 1.27)) (justify right) hide)
+    )
+  )
+  (global_label "vbus_fused" (shape input) (at 92.71 166.37 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 726c8e45-0972-4950-82cd-4ca8531f3f71)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 106.0175 166.37 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
   (global_label "vbus_no_fuse" (shape input) (at 58.42 139.7 90) (fields_autoplaced)
@@ -2418,7 +2428,7 @@
     (property "Value" "USB_C_Receptacle_USB2.0" (at 40.005 135.9971 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Connector_USB:USB_C_Receptacle_G-Switch_GT-USB-7010ASV" (at 43.815 154.94 0)
+    (property "Footprint" "grapto-v3w:USB_C_Receptacle_molex_2169900001" (at 43.815 154.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" (at 43.815 154.94 0)
@@ -2442,6 +2452,11 @@
     (pin "B9" (uuid f97d5837-b750-48a1-9a5f-7f88eef14aa0))
     (pin "S1" (uuid 7d0ac5f4-6eac-47b0-84e3-0b37290a1b0a))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "J6") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "J6") (unit 1)
@@ -2468,6 +2483,11 @@
     (pin "1" (uuid 5dfbd1dd-02d9-48e0-bc56-2ad773503249))
     (pin "2" (uuid 46c686ee-da6c-42d3-b27f-ef149b708075))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "R5") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "R5") (unit 1)
@@ -2493,6 +2513,11 @@
     )
     (pin "1" (uuid 360fd5ee-6e0c-42c3-89d9-ffafd4d361b1))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "#FLG0108") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "#FLG0108") (unit 1)
@@ -2510,7 +2535,7 @@
     (property "Value" "TestPoint" (at 173.355 26.035 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" (at 182.88 34.29 0)
+    (property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" (at 182.88 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 182.88 34.29 0)
@@ -2518,6 +2543,11 @@
     )
     (pin "1" (uuid 7d36d0a7-3497-4df0-9e79-80e422d1a21b))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "TP17") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "TP17") (unit 1)
@@ -2535,7 +2565,7 @@
     (property "Value" "22u" (at 250.19 105.41 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 252.095 108.8898 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 252.095 108.8898 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 248.285 109.855 0)
@@ -2544,6 +2574,11 @@
     (pin "1" (uuid f691e144-7960-4de7-9210-c87c5b310b67))
     (pin "2" (uuid b8138b74-f612-4668-bde7-b3982994950e))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "C3") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "C3") (unit 1)
@@ -2569,6 +2604,11 @@
     )
     (pin "1" (uuid 41302097-0f1a-4cd6-8078-932ddb72ac4f))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "#FLG0105") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "#FLG0105") (unit 1)
@@ -2586,7 +2626,7 @@
     (property "Value" "22u" (at 257.81 137.795 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 254.3302 139.7 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 254.3302 139.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 253.365 135.89 0)
@@ -2595,6 +2635,11 @@
     (pin "1" (uuid c5750c29-ef83-419a-98c5-5d2a76b4fa51))
     (pin "2" (uuid 029a71ae-cc3b-4418-8b88-a3c3a3d08ff1))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "C4") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "C4") (unit 1)
@@ -2612,7 +2657,7 @@
     (property "Value" "22u" (at 177.8 40.005 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 174.3202 41.91 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 174.3202 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 173.355 38.1 0)
@@ -2621,6 +2666,11 @@
     (pin "1" (uuid 4eb878e1-e2d5-4174-b14f-fb8831790280))
     (pin "2" (uuid e88c5ac6-5a00-435f-8a8e-81e6ee4f14a6))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "C17") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "C17") (unit 1)
@@ -2649,6 +2699,11 @@
     (pin "3" (uuid c48936f7-53e4-4244-a56a-666ef67c91b5))
     (pin "4" (uuid c14c3cb6-c048-487a-8b42-a81e72e2fb2c))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "D30") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "D30") (unit 1)
@@ -2666,7 +2721,7 @@
     (property "Value" "~" (at 86.36 30.48 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" (at 93.345 33.655 0)
+    (property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" (at 93.345 33.655 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 93.345 33.655 0)
@@ -2674,6 +2729,11 @@
     )
     (pin "1" (uuid e1fb5ac3-2aa0-465b-a939-b699401d22b8))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "TP22") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "TP22") (unit 1)
@@ -2704,6 +2764,11 @@
     (pin "5" (uuid 192fed49-5960-4f19-9236-371abd1bd7ab))
     (pin "6" (uuid 91bc7d4c-7cb5-4156-9546-169ba15f1495))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "U3") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "U3") (unit 1)
@@ -2730,6 +2795,11 @@
     (pin "1" (uuid 583be3b6-fbc4-4a01-9d9e-b6e91d16cf57))
     (pin "2" (uuid 25707b09-42d2-42b4-ba4e-354fb942ec22))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "J1") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "J1") (unit 1)
@@ -2756,6 +2826,11 @@
     (pin "1" (uuid 48667a15-06d4-4bac-acc1-297328fea157))
     (pin "2" (uuid 78e290fb-7436-4493-9fcb-e582d68408f7))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "R24") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "R24") (unit 1)
@@ -2784,6 +2859,11 @@
     (pin "3" (uuid 4703f6ce-c1ba-4a60-a484-b7a968db26ad))
     (pin "4" (uuid 01892f12-a817-4810-bee5-9fa15b604a87))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "D31") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "D31") (unit 1)
@@ -2801,7 +2881,7 @@
     (property "Value" "TestPoint" (at 47.752 178.1052 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" (at 51.435 179.705 0)
+    (property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" (at 51.435 179.705 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 51.435 179.705 0)
@@ -2809,6 +2889,11 @@
     )
     (pin "1" (uuid 841da6f7-1698-4810-a4eb-50d82cc331bc))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "TP15") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "TP15") (unit 1)
@@ -2835,6 +2920,11 @@
     (pin "1" (uuid 4f79dde2-25f3-4c5d-8076-c6ad95ed70ea))
     (pin "2" (uuid c51b632e-cc0e-445f-92c2-70a7d6a976be))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "R23") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "R23") (unit 1)
@@ -2865,6 +2955,11 @@
     (pin "5" (uuid b0e002dd-b1fa-41a7-b5d3-8a6b1ac4a333))
     (pin "6" (uuid 2410cb12-10cd-45ed-a4e0-13df7fd75755))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "J8") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "J8") (unit 1)
@@ -2890,6 +2985,11 @@
     )
     (pin "1" (uuid 2d6fa17d-dba1-404b-8d13-737d623688d5))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "#FLG0106") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "#FLG0106") (unit 1)
@@ -2916,6 +3016,11 @@
     (pin "1" (uuid 14686823-6948-46d6-8fe6-d3ab841b0ba9))
     (pin "2" (uuid 895a4e0b-889e-45c0-8b3a-8d547d6acde4))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "L2") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "L2") (unit 1)
@@ -2933,7 +3038,7 @@
     (property "Value" "TestPoint" (at 82.55 131.445 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" (at 92.075 139.7 0)
+    (property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" (at 92.075 139.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 92.075 139.7 0)
@@ -2941,6 +3046,11 @@
     )
     (pin "1" (uuid 50d8506b-85fd-48a3-87cf-4641c3324fca))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "TP14") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "TP14") (unit 1)
@@ -2958,7 +3068,7 @@
     (property "Value" "TestPoint" (at 68.58 131.445 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" (at 78.105 139.7 0)
+    (property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" (at 78.105 139.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 78.105 139.7 0)
@@ -2966,6 +3076,11 @@
     )
     (pin "1" (uuid 0f250504-dccb-4f42-ae7d-6a82b0ad8836))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "TP13") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "TP13") (unit 1)
@@ -2983,7 +3098,7 @@
     (property "Value" "22u" (at 119.126 39.8022 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 117.1702 41.91 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 117.1702 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 116.205 38.1 0)
@@ -2992,6 +3107,11 @@
     (pin "1" (uuid 00695b46-a5e7-4661-a83e-5cfb182bbc5c))
     (pin "2" (uuid d26d875d-783a-4abb-8cca-8674896d2a30))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "C16") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "C16") (unit 1)
@@ -3024,6 +3144,11 @@
     (pin "7" (uuid d330b355-5286-42d6-b1fb-0c9d7b7824f6))
     (pin "8" (uuid 0c948c90-7e52-4146-819d-105bdb30928a))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "U2") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "U2") (unit 1)
@@ -3052,6 +3177,11 @@
     (pin "3" (uuid 7c891867-b771-4635-a927-a389741e4490))
     (pin "4" (uuid cdbbc3ca-d671-4bcf-b00e-97de6a26e0d9))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "D32") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "D32") (unit 1)
@@ -3078,6 +3208,11 @@
     (pin "1" (uuid 847c2440-42d3-4a93-955e-93df4d0500ed))
     (pin "2" (uuid 204ce745-823a-4d49-9987-b896d4e02622))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "R13") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "R13") (unit 1)
@@ -3104,6 +3239,11 @@
     (pin "1" (uuid 2e3f50cb-c732-4c1b-84c2-208bb6e40d5b))
     (pin "2" (uuid 34e24be7-419f-4b83-80d1-0a976b5c4d22))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "R25") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "R25") (unit 1)
@@ -3163,6 +3303,11 @@
     (pin "8" (uuid 09117f7c-36fc-43f8-b31e-1bc6ca300217))
     (pin "9" (uuid 2bc96d74-b36c-42df-afe1-9c78115adaee))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "U1") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "U1") (unit 1)
@@ -3189,6 +3334,11 @@
     (pin "1" (uuid ca6e14bf-6c88-49e7-a6d7-c70280009848))
     (pin "2" (uuid 65e17ef3-7831-49a4-8b19-eb943a2b4d57))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "R20") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "R20") (unit 1)
@@ -3215,6 +3365,11 @@
     (pin "1" (uuid b1fe7bb0-cac1-4142-8517-7c4bd0e220a9))
     (pin "2" (uuid 2e9c54e1-b47f-4405-bd25-f849fecfd8f8))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "R1") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "R1") (unit 1)
@@ -3241,6 +3396,11 @@
     (pin "1" (uuid b290852c-00ae-4ffd-9029-7054aa851c98))
     (pin "2" (uuid 82699e21-ab55-4e05-8a10-4b429bd580c2))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "R2") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "R2") (unit 1)
@@ -3267,6 +3427,11 @@
     (pin "1" (uuid af82879a-6a80-492c-a4eb-e8535a28d3d9))
     (pin "2" (uuid 1f60e86e-86b0-406f-8525-88917671bd17))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "R9") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "R9") (unit 1)
@@ -3284,7 +3449,7 @@
     (property "Value" "TestPoint" (at 117.602 32.6902 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" (at 121.285 34.29 0)
+    (property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" (at 121.285 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 121.285 34.29 0)
@@ -3292,6 +3457,11 @@
     )
     (pin "1" (uuid a8d853aa-c31f-40a3-813b-7bd7b2c8d9ae))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "TP16") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "TP16") (unit 1)
@@ -3309,7 +3479,7 @@
     (property "Value" "120p" (at 167.64 40.64 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 166.0652 41.91 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 166.0652 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 165.1 38.1 0)
@@ -3318,6 +3488,11 @@
     (pin "1" (uuid a89f59af-f8ff-4093-891e-64010b220ebd))
     (pin "2" (uuid 379458b2-7d5b-472b-8170-39224f0daed2))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "C2") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "C2") (unit 1)
@@ -3335,7 +3510,7 @@
     (property "Value" "22u" (at 238.76 147.955 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 235.2802 149.86 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 235.2802 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 234.315 146.05 0)
@@ -3344,6 +3519,11 @@
     (pin "1" (uuid 9330a16f-d6a2-4d24-bb85-35495dc29170))
     (pin "2" (uuid 0e3ddfe3-e735-49f3-a4e3-742d7fea50fb))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "C7") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "C7") (unit 1)
@@ -3361,7 +3541,7 @@
     (property "Value" "TestPoint" (at 187.325 26.035 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" (at 196.85 34.29 0)
+    (property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" (at 196.85 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 196.85 34.29 0)
@@ -3369,6 +3549,11 @@
     )
     (pin "1" (uuid 7406e6ad-51a2-4202-b862-7dbc029b8893))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "TP18") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "TP18") (unit 1)
@@ -3386,7 +3571,7 @@
     (property "Value" "Conn_01x01_Female" (at 33.6042 185.8522 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 32.385 184.785 0)
+    (property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" (at 32.385 184.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 32.385 184.785 0)
@@ -3394,6 +3579,11 @@
     )
     (pin "1" (uuid 07693281-e6c3-4c05-86a0-33e833f8ce37))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "J2") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "J2") (unit 1)
@@ -3411,7 +3601,7 @@
     (property "Value" "22u" (at 193.04 138.43 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (at 189.5602 140.335 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (at 189.5602 140.335 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 188.595 136.525 0)
@@ -3420,6 +3610,11 @@
     (pin "1" (uuid 326d8912-2083-4ea2-a205-fed7d27c0a87))
     (pin "2" (uuid 4a652751-a97e-4486-93d4-2130dd69b2fe))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "C6") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "C6") (unit 1)
@@ -3446,6 +3641,11 @@
     (pin "1" (uuid f32fa9b2-cb54-4e78-b698-09d2f8ad041d))
     (pin "2" (uuid cb6f88f8-d28c-4835-8ac0-c6de233cbbeb))
     (instances
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17"
+          (reference "F4") (unit 1)
+        )
+      )
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c"
           (reference "F4") (unit 1)
@@ -3467,6 +3667,9 @@
     (instances
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c" (page "4"))
+      )
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17" (page "3"))
       )
     )
   )
@@ -3512,6 +3715,9 @@
     (instances
       (project "grapto-v3w-left"
         (path "/da28ce39-beea-4dbf-8e32-8948bb1ae5c4/2abfd27e-4d76-4b23-8267-7956197c0f1c" (page "#"))
+      )
+      (project "grapto-v3w-right"
+        (path "/d4b2565a-3beb-4471-870f-0a9adef7d41a/8134e62a-92f8-41a1-9193-208391a0de17" (page "#"))
       )
     )
   )
